@@ -1,0 +1,40 @@
+<h1 style="color:red">Bai Tap NgFor NgClass</h1>
+
+<div class="form-group">
+  <label for="usr">Ma SP:</label>
+  <input type="text" class="form-control" id="usr" #maSP>
+</div>
+<div class="form-group">
+  <label for="pwd">Ten SP:</label>
+  <input type="text" class="form-control" id="pwd" #tenSP>
+</div>
+<div class="form-group">
+  <label for="pwd">Gia:</label>
+  <input type="number" class="form-control" id="pwd"#giaSP>
+</div>
+<div>
+  <button class="btn btn-success" (click)= "LayThongTin(maSP.value,tenSP.value,giaSP.value)">Them San Pham</button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ma SP</th>
+      <th>Ten SP</th>
+      <th>Gia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let item of danhSachSanPham;let stt = index" [ngClass]="{ mau:(stt+1)%2==0}">
+      <td>{{stt +1 }}</td>
+      <td>{{item.ma}}</td>
+      <td>{{item.ten}}</td>
+      <td>{{item.gia}}</td>
+    </tr>
+    <tr>
+      <td scope="row"></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

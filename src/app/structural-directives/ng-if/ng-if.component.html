@@ -1,0 +1,16 @@
+<h3 style="color:red">*ngIF</h3>
+<div *ngIf ="status"> 
+Cybersoft
+</div>
+<button class="btn btn-secondary" (click) = "Hiden()">Hiden</button>
+<button class="btn btn-success" (click) = "Show()">Show</button>
+<button class="btn btn-danger" (click)= Toggle()>Toggle</button>
+<h3 style="color:red">*ngIF-ELSE</h3>
+<div *ngIf="status2; else NoiDungElse">
+  <button class="btn btn-danger" (click)="DangXuat()"> DangXuat</button>
+  <h5>Xin Chao Cybersoft</h5>
+</div>
+<ng-template #NoiDungElse>
+  <button class="btn btn-primary" (click)="DangNhap()"> DangXuat</button>
+  <h5>Chua Dang Nhap</h5>
+</ng-template>

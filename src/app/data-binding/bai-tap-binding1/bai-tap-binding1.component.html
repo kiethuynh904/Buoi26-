@@ -1,0 +1,10 @@
+<form action="">
+  <h1>Register form</h1>
+  <p>Email</p>
+  <input name="email" type="text" [value]="email" [(ngModel)]="email">
+  <p>FullName:</p>
+  <input type="text" #thamso>
+  <button class="btn btn-success" (click)="Submit(thamso)">Submit</button>
+  <p>Email:{{email}}</p>
+  <p>Fullname:{{fullname}}</p>
+</form>

@@ -1,0 +1,4 @@
+<button *ngIf = "!ghe.TrangThai;else gheDuocDat" class="ghe">{{ghe.SoGhe}}</button>
+<ng-template #gheDuocDat>
+    <button [ngClass]= "{'gheDuocDat':ghe.TrangThai}" disabled >{{ghe.SoGhe}}</button>
+</ng-template>
